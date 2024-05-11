@@ -1,5 +1,5 @@
 import { Before, Given, When, Then } from "@badeball/cypress-cucumber-preprocessor"
-import { PaginaLogin } from "../pages/pagina-login.page"
+import { PaginaLogin } from "../pages/pagina-inicial.page"
 
 const paginaLogin = new PaginaLogin()
 let user

@@ -22,6 +22,10 @@ export class PaginaLogin {
 
     buttonFecharModalCadastro = "#btnCloseModal"
 
+    erroCampoObrigatorio = ".input__warging"
+
+    toggleCriarContaSaldo = "#toggleAddBalance"
+
     inputEmailRegistrar() {
         return cy.get("[placeholder='Informe seu e-mail']").eq(1)
     }
@@ -60,6 +64,12 @@ export class PaginaLogin {
         })
     }
 
+    clickButtonCadastrar() {
+        cy.get(this.buttonCadastrar).click({
+            force: true
+        })
+    }
+
     criarUsuario() {
         this.typeRegistrarEmail()
         this.typeRegistrarNome()
@@ -72,5 +82,4 @@ export class PaginaLogin {
 
         return this.usuarioCriado
     }
-
 }
